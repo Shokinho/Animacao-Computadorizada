@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmxk160gj4h6v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3mp7"]
+albedo_color = Color(0.753884, 0.288269, 0.798392, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_so6fr"]
+
+[node name="Ponto_de_controle" type="MeshInstance3D" groups=["pontos_de_controle"]]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_x3mp7")
+mesh = SubResource("SphereMesh_so6fr")

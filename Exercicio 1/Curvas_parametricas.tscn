@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://dl16a82jx5d4a"]
+
+[ext_resource type="Script" uid="uid://dkyq622v4id36" path="res://curvas_parametricas.gd" id="1_c7t08"]
+[ext_resource type="PackedScene" uid="uid://dfohfgx1jsppg" path="res://butterfly/scene.gltf" id="2_ben1k"]
+[ext_resource type="PackedScene" uid="uid://ulpv6y3rybfe" path="res://generic_ranunculus_flower/scene.gltf" id="3_jjq7u"]
+[ext_resource type="PackedScene" uid="uid://bmxk160gj4h6v" path="res://Ponto_de_controle.tscn" id="4_vl2il"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hs68"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_aaorx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5eh06"]
+
+[sub_resource type="Environment" id="Environment_aaorx"]
+background_mode = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[sub_resource type="FontFile" id="FontFile_4to2k"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_c7t08")
+
+[node name="Borboleta" parent="." instance=ExtResource("2_ben1k")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Flores" parent="." instance=ExtResource("3_jjq7u")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 3.55413, 0, 2.16059)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4, 0)
+projection = 1
+size = 5.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.687138, 0.726527, 0, -0.726527, 0.687138, 0, 4.94215, 0)
+
+[node name="Chao" type="StaticBody3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chao"]
+material_override = SubResource("StandardMaterial3D_5hs68")
+mesh = SubResource("BoxMesh_aaorx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chao"]
+shape = SubResource("BoxShape3D_5eh06")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_aaorx")
+
+[node name="Ponto_de_controle" parent="." instance=ExtResource("4_vl2il")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.2, 0.15, 1.684)
+
+[node name="Ponto_de_controle2" parent="." instance=ExtResource("4_vl2il")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.911, 0.15, -1.776)
+
+[node name="Ponto_de_controle3" parent="." instance=ExtResource("4_vl2il")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.911, 0.15, -1.776)
+
+[node name="Ponto_de_controle4" parent="." instance=ExtResource("4_vl2il")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 3.2, 0.15, 1.684)
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Texto1" type="Label" parent="Interface"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 189.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_4to2k")
+text = "F1 - Curva Linear
+F2 - Curva Cúbica (Bézier)
+ESC - Fechar o programa"
+
+[node name="Texto2" type="Label" parent="Interface"]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 1920.0
+offset_bottom = 1060.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 2

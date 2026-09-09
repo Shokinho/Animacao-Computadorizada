@@ -1,0 +1,8 @@
+Model Information:
+* title:	Butterfly
+* source:	https://sketchfab.com/3d-models/butterfly-87ef5cea7e2f4557a28503f5b96646cd
+* author:	assetfactory (https://sketchfab.com/assetfactory)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf22jn0i07j80"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aa0b1"]
+albedo_color = Color(0.845731, 0.000190213, 0.739158, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_nbvih"]
+
+[node name="Ponto_intermediario" type="MeshInstance3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_aa0b1")
+mesh = SubResource("SphereMesh_nbvih")
