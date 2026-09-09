@@ -43,7 +43,11 @@
 
 ## Link para a build
 
-Em breve.
+<div>
+    <img width="16" alt="Clipe de papel" src="https://github.com/user-attachments/assets/64c9419a-1a16-4bb6-bdfd-3898370a9e2b" />
+    <a href="https://github.com/Shokinho/Animacao-Computadorizada/releases/tag/Exerc%C3%ADcio_1">Link</a>
+
+</div>
 
 ## Referências e/ou créditos
 
@@ -52,6 +56,7 @@ Em breve.
     <li>Modelo das flores - https://sketchfab.com/assetfactory</li>
     <li>Video sobre interpolação linear - https://www.youtube.com/watch?v=eTI2NQ6MCQk</li>
     <li>Livro sobre a matemática usada na programação de jogos e na computação gráfica - Mathematics for 3D game programming and computer graphics de Eric Lengyel</li>
+    <li>Ícones dos README.md do repositório - https://www.flaticon.com/authors/magnific</li>
 </ul>
 
 ## Comentários finais
