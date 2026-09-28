@@ -14,5 +14,6 @@ Este repositório destina-se as entregas dos exercícios e dos trabalhos da disc
 |-------|----------------|---------------|
 |`Exercicio 1`|Godot (GDScript)|Visualização de curvas lineares e cúbicas (Bézier)|
 |`Exercicio 2`|Godot (GDScript)|Exploração de sistemas de partículas|
+|`Exercicio 3`|Godot (GDScript)|Deformações com o uso de blend shapes|
 
 </div>
