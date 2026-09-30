@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://drk01gdo5jvdv"]
+
+[ext_resource type="Script" uid="uid://bi8nqeox3c3gp" path="res://blend_shapes.gd" id="1_l41cd"]
+[ext_resource type="Script" uid="uid://cgimrx1np117s" path="res://agua_viva.gd" id="2_dbfsp"]
+[ext_resource type="PackedScene" uid="uid://sgjr2jrr42ox" path="res://Água-viva.fbx" id="2_l41cd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l41cd"]
+sky_energy_multiplier = 64.0
+
+[sub_resource type="Sky" id="Sky_63a8j"]
+sky_material = SubResource("ProceduralSkyMaterial_l41cd")
+
+[sub_resource type="Environment" id="Environment_l41cd"]
+background_mode = 1
+sky = SubResource("Sky_63a8j")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_l41cd")
+
+[node name="Água-viva" parent="." instance=ExtResource("2_l41cd")]
+script = ExtResource("2_dbfsp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.8)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l41cd")
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interface"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 386.0
+offset_bottom = 1080.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Interface/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Interface/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Corpo"
+
+[node name="HSlider" type="HSlider" parent="Interface/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Interface/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Interface/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Tentáculos dobrados"
+
+[node name="HSlider" type="HSlider" parent="Interface/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Interface/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Interface/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Tentáculos em espiral"
+
+[node name="HSlider" type="HSlider" parent="Interface/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+
+[node name="Label" type="Label" parent="Interface"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -956.0
+offset_top = -43.0
+offset_right = 956.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Pressione a tecla Enter para iniciar a animação da água-viva baseada nos valores dados aos alvos da blend shape da mesma ou a tecla ESC para encerrar o programa."
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 1

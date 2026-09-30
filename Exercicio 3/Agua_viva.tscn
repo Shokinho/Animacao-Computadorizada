@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpx404spo4c6d"]
+
+[ext_resource type="PackedScene" uid="uid://sgjr2jrr42ox" path="res://Água-viva.fbx" id="1_xeuk8"]
+
+[node name="Água-viva" instance=ExtResource("1_xeuk8")]
+
+[node name="Cylinder_002" parent="group" index="0"]
+blend_shapes/blendShape1.Corpo = 0.996741
+
+[node name="BezierCurve_002" parent="group" index="1"]
+blend_shapes/blendShape1.Corpo = 0.996741
