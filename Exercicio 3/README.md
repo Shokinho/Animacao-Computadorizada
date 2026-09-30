@@ -44,13 +44,18 @@
 
 ## Link para a build
 
-Em breve.
+<div>
+    <img width="16" alt="Clipe de papel" src="https://github.com/user-attachments/assets/64c9419a-1a16-4bb6-bdfd-3898370a9e2b" />
+    <a href="https://github.com/Shokinho/Animacao-Computadorizada/releases/tag/Exerc%C3%ADcio_3">Link</a>
+
+</div>
 
 ## Referências e/ou créditos
 
 <ul type="circle">
     <li>Modelo da água-viva - https://sketchfab.com/assetfactory</li>
     <li>Documentação sobre o objeto Tween presente no motor Godot - https://docs.godotengine.org/en/latest/classes/class_tween.html</li>
+    <li>Ícones dos README.md do repositório - https://www.flaticon.com/authors/magnific</li>
 </ul>
 
 ## Comentários finais
