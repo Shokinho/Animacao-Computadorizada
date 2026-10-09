@@ -42,15 +42,19 @@
 
 ## Link para a build
 
-Em breve.
+<div>
+    <img width="16" alt="Clipe de papel" src="https://github.com/user-attachments/assets/64c9419a-1a16-4bb6-bdfd-3898370a9e2b" />
+    <a href="https://github.com/Shokinho/Animacao-Computadorizada/releases/tag/Trabalho_do_Grau_A">Link</a>
+</div>
 
 ## Referências e/ou créditos
 
 <ul type="circle">
     <li>Modelo da água-viva - https://sketchfab.com/assetfactory</li>
     <li>Música Ghibli Harp - https://pixabay.com/pt/users/konstantinpazuzustudio-53945084/</li>
+    <li>Ícones dos README.md do repositório - https://www.flaticon.com/authors/magnific</li>
 </ul>
 
 ## Comentários finais
 
-<p align="justify">É possível mudar a música usada para modificar os pesos dos alvos da blend shape do modelo selecionado Para isto, é necessário clonar a pasta deste trabalho e abrí-lo como um projeto do motor Godot. Ao abrir o projeto, clique com o botão direito em cima do arquivo paozinho.mp3, o qual está localizado no canto inferior esquerdo da tela, e selecione a opção Apagar à Direita. Em seguida, copie e cole a música requerida dentro da pasta do projeto e aguarde a importação do arquivo. Por último, selecione o nó Música, localizado no canto superior esquerdo da tela, e carregue o arquivo da música requerida na propriedade Stream do nó, localizado no canto superior direito da tela. É importante dizer que são lidos apenas os formatos de arquivo WAV, Ogg e MP3, com algumas exceções envolvendo os formatos de arquivo MP1 e MP2.<p>
+<p align="justify">É possível mudar a música usada para modificar os pesos dos alvos da blend shape do modelo selecionado Para isto, é necessário clonar a pasta deste trabalho e abrí-lo como um projeto do motor Godot. Ao abrir o projeto, clique com o botão direito em cima do arquivo konstantinpazuzustudio-ghibli-harp-live-concert-harp-512074.mp3, o qual está localizado no canto inferior esquerdo da tela, e selecione a opção Apagar à Direita. Em seguida, copie e cole a música requerida dentro da pasta do projeto e aguarde a importação do arquivo. Por último, selecione o nó Música, localizado no canto superior esquerdo da tela, e carregue o arquivo da música requerida na propriedade Stream do nó, localizado no canto superior direito da tela. É importante dizer que são lidos apenas os formatos de arquivo WAV, Ogg e MP3, com algumas exceções envolvendo os formatos de arquivo MP1 e MP2.<p>
