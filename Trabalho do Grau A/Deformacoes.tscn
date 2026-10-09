@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://qwdg7c4djccp"]
+
+[ext_resource type="Script" uid="uid://udc5vhc2gxq7" path="res://espectro_sonoro.gd" id="1_45sje"]
+[ext_resource type="AudioStream" uid="uid://2tp83put7rhl" path="res://konstantinpazuzustudio-ghibli-harp-live-concert-harp-512074.mp3" id="2_45sje"]
+[ext_resource type="PackedScene" uid="uid://bfylsoxm8gwhs" path="res://Agua_viva.tscn" id="3_retup"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_45sje"]
+sky_energy_multiplier = 2.0
+
+[sub_resource type="Sky" id="Sky_kjkt7"]
+sky_material = SubResource("ProceduralSkyMaterial_45sje")
+
+[sub_resource type="Environment" id="Environment_retup"]
+background_mode = 1
+sky = SubResource("Sky_kjkt7")
+ambient_light_source = 3
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_45sje")
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_45sje")
+autoplay = true
+
+[node name="ÁguaViva" parent="." instance=ExtResource("3_retup")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_retup")
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Descricao" type="Label" parent="Interface"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 196.0
+offset_bottom = 31.0
+text = "ESC - Fechar o programa"
