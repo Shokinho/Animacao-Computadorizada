@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx8bjs6cgx7wf"]
+
+[ext_resource type="PackedScene" uid="uid://crdb2v7lngml1" path="res://Cenas/Personagem.tscn" id="1_6kycv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgd5g"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_51u4e"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_381w4"]
+sky_horizon_color = Color(1, 0.470922, 0.400888, 1)
+sky_energy_multiplier = 2.0
+ground_bottom_color = Color(1, 1, 1, 1)
+ground_horizon_color = Color(1, 0.669569, 0.610983, 1)
+
+[sub_resource type="Sky" id="Sky_fhr7g"]
+sky_material = SubResource("ProceduralSkyMaterial_381w4")
+
+[sub_resource type="Environment" id="Environment_dvi78"]
+background_mode = 1
+background_color = Color(1, 0.470588, 0.4, 1)
+sky = SubResource("Sky_fhr7g")
+sky_rotation = Vector3(1.5708, 0, 0)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeninaCompleto" parent="." instance=ExtResource("1_6kycv")]
+
+[node name="Chao" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_wgd5g")
+mesh = SubResource("QuadMesh_51u4e")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 1.2, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dvi78")
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Caixa Vertical" type="VBoxContainer" parent="Interface"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 146.0
+offset_bottom = 85.0
+
+[node name="Botao 1" type="Label" parent="Interface/Caixa Vertical"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "F1 - Continência"
+
+[node name="Botao 2" type="Label" parent="Interface/Caixa Vertical"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "F2 - Descanso"
+
+[node name="Botao 3" type="Label" parent="Interface/Caixa Vertical"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "F3 - Passo de gato"
+
+[node name="Botao 4" type="Label" parent="Interface/Caixa Vertical"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ESC - Fechar o programa"
+
+[node name="Descricao" type="Label" parent="Interface"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -565.5
+offset_top = -31.0
+offset_right = 565.5
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Observação: Uma determinada animação não pode ser reproduzida mais de uma vez consecutivamente, somente pode ser reproduzida após a reprodução de outra animação."
